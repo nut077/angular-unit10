@@ -1,0 +1,10 @@
+<div *ngIf="currentUser">
+  <button type="submit" class="btn btn-outline-success my-2 my-sm-0" (click)="logout()">Logout</button>
+</div>
+<div *ngIf="!currentUser">
+  <form class="form-inline my- my-lg-0 float-sm-right">
+    <input type="text" name="username" [(ngModel)]="username" class="form-control mr-sm-2" placeholder="Username"/>
+    <input type="password" name="password" [(ngModel)]="password" class="form-control mr-sm-2" placeholder="Password"/>
+    <button type="submit" class="btn btn-outline-success my-2 my-sm-0" (click)="login($event)">Login</button>
+  </form>
+</div>

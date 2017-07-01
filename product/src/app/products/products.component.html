@@ -1,0 +1,6 @@
+<app-product-list
+  [products]="products | async"
+  [currentUser]="userService.currentUser"
+  (deleteProductEvent)="delete($event)"
+  (addToCartEvent)="addToCart($event)">
+</app-product-list>

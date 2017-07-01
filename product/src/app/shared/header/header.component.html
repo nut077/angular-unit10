@@ -1,0 +1,8 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <a class="navbar-brand mr-auto" href="javascript:void(0)">{{appConfig.title}}</a>
+  <app-auth-form
+    (loginEvent)="login($event)"
+    (logoutEvent)="logout()"
+    [currentUser]="userService.currentUser">
+  </app-auth-form>
+</nav>

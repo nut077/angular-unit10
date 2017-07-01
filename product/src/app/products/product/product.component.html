@@ -1,0 +1,13 @@
+<div class="justify-content-between d-flex w-100">
+  {{product.name}} <span class="badge badge-default badge-pill">{{product.amount}}</span>
+</div>
+<div>
+  <button type="button" class="btn btn-sm btn-danger"
+          *ngIf="currentUser?.isAdmin" (click)="deleteProduct()">
+    Delete
+  </button>
+  <button type="button" class="btn btn-sm btn-success"
+          *ngIf="currentUser && !currentUser?.isAdmin" (click)="addToCart()">
+    Buy
+  </button>
+</div>

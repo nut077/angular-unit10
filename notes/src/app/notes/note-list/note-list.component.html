@@ -1,0 +1,3 @@
+<ul>
+  <li *ngFor="let note of notes"><app-note [note]="note" (noteDelete)="deleteNote($event)"></app-note></li>
+</ul>

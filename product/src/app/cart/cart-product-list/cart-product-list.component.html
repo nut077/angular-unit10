@@ -1,0 +1,15 @@
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item active">
+      <div class="justify-content-between d-flex w-100">
+        My Cart
+      </div>
+    </li>
+    <li *ngFor="let product of products" class="list-group-item">
+      <app-cart-product
+        [product]="product"
+        (deleteProductEvent)="delete($event)">
+      </app-cart-product>
+    </li>
+  </ul>
+</div>

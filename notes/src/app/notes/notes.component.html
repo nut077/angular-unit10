@@ -1,0 +1,2 @@
+<app-note-form (formSubmit)="addNote($event)"></app-note-form>
+<app-note-list [notes]="notes | async" (noteDelete)="deleteNote($event)"></app-note-list>
